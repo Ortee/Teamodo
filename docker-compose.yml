@@ -1,0 +1,5 @@
+mongo:
+  build: .
+  command: iex -S mix exsync
+  ports:
+    - "27017:27017"
