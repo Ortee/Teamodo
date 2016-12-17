@@ -22,18 +22,5 @@ defmodule Teamodo.Router.Users do
     |> put_resp_content_type("application/json")
     |> text("success")
   end
-
-  params do
-    requires :login, type: String
-    requires :username, type: String
-    requires :password, type: String
-  end
-
-  post "/api/users" do
-    IO.puts "POST /api/users"
-    Teamodo.Database.createUser(params)
-    conn
-    |> put_status(201)
-    |> text("success")
-  end
+  
 end

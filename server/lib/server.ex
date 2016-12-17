@@ -7,6 +7,8 @@ defmodule Teamodo.API do
     parsers: [:urlencoded, :json, :multipart]
 
   mount Teamodo.Router.Users
+  mount Teamodo.Router.Auth
+  mount Teamodo.Router.Timers
 
   rescue_from :all do
     conn
