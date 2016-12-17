@@ -1,8 +1,8 @@
-defmodule Server.Mixfile do
+defmodule Teamodo.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :simple,
+    [app: :teamodo,
      version: "0.1.0",
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
@@ -11,8 +11,8 @@ defmodule Server.Mixfile do
   end
 
   def application do
-    [mod: {Simple.App, []},
-       applications: [:mongodb_ecto, :ecto]]
+    [mod: {Teamodo.Database.App, []},
+       applications: [:mongodb_ecto, :ecto, :maru]]
   end
 
   defp deps do

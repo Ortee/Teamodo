@@ -1,9 +1,13 @@
 use Mix.Config
 
-config :maru, Server.API,
-   http: [port: 3030]
+config :maru, Teamodo.API,
+    versioning: [
+      using: :param,
+      parameter: "v",
+    ],
+   http: [port: 3000]
 
-config :simple, Simple.Repo,
+config :teamodo, Teamodo.Database.Repo,
    adapter: Mongo.Ecto,
    database: "mydb",
    hostname: "localhost"

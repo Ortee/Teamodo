@@ -1,0 +1,36 @@
+Users = [
+  {
+    "id":1,
+    "login":"login1",
+    "password":"password1",
+  },
+  {
+    "id":2,
+    "login":"login2",
+    "password":"password2",
+  },
+  {
+    "id":3,
+    "login":"login3",
+    "password":"password3",
+  }
+]
+
+Timers = [
+  {
+    "id":1,
+    "user_id":2,
+    "team_id":1,
+    "time":15,
+    "created_at":"15/09/2016"
+  }
+]
+
+
+Teams = [
+  {
+    "id":1,
+    "boss_id":1,
+    "users_id":[1,2,3]
+  }
+]
