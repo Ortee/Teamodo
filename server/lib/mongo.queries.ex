@@ -13,4 +13,7 @@ defmodule Teamodo.Database do
     Teamodo.Database.Repo.get_by(query, login: login)
   end
 
+  def createUser(params) do
+    Teamodo.Database.Repo.insert!(%User{login: params.login, password: params.password, username: params.username})
+  end
 end
