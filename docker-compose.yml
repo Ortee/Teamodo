@@ -1,5 +1,4 @@
 mongo:
-  build: .
-  command: iex -S mix exsync
+  image: mongo
   ports:
     - "27017:27017"
