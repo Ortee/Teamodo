@@ -1,4 +1,4 @@
 mongo:
-  image: mongo
+  image: postgres
   ports:
     - "27017:27017"

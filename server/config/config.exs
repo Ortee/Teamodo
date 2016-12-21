@@ -7,7 +7,9 @@ config :maru, Teamodo.API,
     ],
    http: [port: 3000]
 
-config :teamodo, Teamodo.Database.Repo,
-   adapter: Mongo.Ecto,
-   database: "mydb",
-   hostname: "localhost"
+ config :temodo, Teamodo.Database.Repo,
+   adapter: Ecto.Adapters.Postgres,
+   database: "db",
+   username: "postgres",
+   password: "postgres",
+   hostname: "localhost",
