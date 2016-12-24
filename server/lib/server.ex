@@ -6,9 +6,9 @@ defmodule Teamodo.API do
     json_decoder: Poison,
     parsers: [:urlencoded, :json, :multipart]
 
-  mount Teamodo.Router.Users
-  mount Teamodo.Router.Auth
-  mount Teamodo.Router.Timers
+  # mount Teamodo.Router.Users
+  # mount Teamodo.Router.Auth
+  # mount Teamodo.Router.Timers
 
   rescue_from :all do
     conn

@@ -1,10 +1,18 @@
-def start(_type, _args) do
-  import Supervisor.Spec
+defmodule Teamodo.Database.App do
+  use Application
 
-  children = [
-    supervisor(Repo, [])
-  ]
+  def start(_type, _args) do
+    import Supervisor.Spec, warn: false
 
-  opts = [strategy: :one_for_one, name: Teamodo.Supervisor]
-  Supervisor.start_link(children, opts)
+    children = [
+      supervisor(Teamodo.Database.Repo, [])
+    ]
+
+    opts = [strategy: :one_for_one, name: Teamodo.Supervisor]
+    Supervisor.start_link(children, opts)
+  end
+end
+
+defmodule Teamodo.Database.Repo do
+  use Ecto.Repo, otp_app: :teamodo
 end

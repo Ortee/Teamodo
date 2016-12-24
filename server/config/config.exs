@@ -10,6 +10,9 @@ config :maru, Teamodo.API,
  config :temodo, Teamodo.Database.Repo,
    adapter: Ecto.Adapters.Postgres,
    database: "db",
-   username: "postgres",
-   password: "postgres",
+   username: "user",
+   password: "password",
    hostname: "localhost",
+   port: "12345"
+
+   config :temodo, ecto_repos: [Teamodo.Database.Repo]

@@ -12,16 +12,15 @@ defmodule Teamodo.Mixfile do
 
   def application do
     [mod: {Teamodo.Database.App, []},
-       applications: [:mongodb_ecto, :ecto, :maru]]
+       applications: [:ecto, :maru, :postgrex]]
   end
 
   defp deps do
     [
-      {:mongodb, "~> 0.1.0"},
-      {:ecto, "~> 1.0.0"},
+      {:ecto, "~> 2.1.1"},
       {:maru, "~> 0.11"},
       {:exsync, "~> 0.1.3"},
-      {:mongodb_ecto, "~> 0.1.5"}
+      {:postgrex, "~> 0.13.0"}
     ]
   end
 end
